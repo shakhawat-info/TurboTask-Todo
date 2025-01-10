@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Apps</title>
-    <!-- Bootstrap css File link -->
-    <link rel="stylesheet" href="bootstrap-5.3.2/bootstrap.min.css">
-    <!-- Row css file Link -->
-    <link rel="stylesheet" href="css/spacing.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -19,8 +17,12 @@
                 <input type="text"  id="newItemText" placeholder="enter your task...." oninput="placehold()">
                 <button id="addNewItemBtn" type="button" onclick="pending()" >Add</button>
             </div>
+            <div class="boxes">
+                <button type="button" class="paddingList active">Pending List</button>
+                <button type="button" class="completeList">Complete List</button>
+            </div>
             <div class="content">
-                <div class="pending">
+                <div class="pending active">
                     <h2 class="itemHead"><span class="itmNumber"></span><span>Pending Items Details</span></h2>
                     <ul id="pendingListItemHolder"></ul>
                 </div>
@@ -36,11 +38,7 @@
         <li class="liItem">sfddsl</li>
     </ul> -->
     
-    <!-- Bootstrap JS file Link -->
-    <script src="bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
-    
-    <!-- Fontawesome CDN Link -->
-    <script src="https://kit.fontawesome.com/5e82e4ce8d.js" crossorigin="anonymous"></script>
+
 
     <!-- Row JS File Link -->
     <script src="js/script.js"></script>

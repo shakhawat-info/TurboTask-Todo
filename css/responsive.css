@@ -1,0 +1,59 @@
+@media (min-width: 400px) {
+    #newItemText{
+        font-size: 14px;
+    }
+    #addNewItemBtn{
+        font-size: 15px;
+        margin: 0;
+        padding: 5px 20px;
+    }
+    .itemHead{
+        font-size: 13px;
+    }
+    .boxes{
+        border: 1px solid #fff;
+        display: flex;
+        margin: 10px 0;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        overflow: hidden;
+}
+    .boxes button{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 13px;
+    }
+    .boxes button.active{
+        background-color: #fff;
+        color: #040b3cdd;
+    }
+    .content > div{
+        display: none;
+    }
+    .content .active{
+        display: block;
+        width: 100%;
+    }
+    .task{
+        font-size: 15px;
+    }
+    button{
+        font-size: 20px;
+    }
+}
+@media (min-width: 750px) {
+    .boxes{
+        display: none;
+    }
+    .itemHead{
+        font-size: 13px;
+    }
+    .content > div{
+        display: block;
+        width: 100%;
+    }
+  }

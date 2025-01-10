@@ -105,11 +105,7 @@ body{
     font-size: 20px;
     display: flex;justify-content: space-around;
 }
-@media (max-width: 400px) {
-    .itemHead{
-        font-size: 13px;
-    }
-  }
+
 .list{
     display: flex;
     align-items: center;
@@ -203,4 +199,13 @@ body{
 .statusCompleted{
     display: block;
     text-decoration: line-through;
+}
+
+.boxes button{
+    width: 50%;
+    padding: 5px;
+}
+.completedalign{
+    display: flex;
+    justify-content: space-between;
 }

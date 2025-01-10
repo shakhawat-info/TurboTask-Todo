@@ -84,7 +84,7 @@ function complete(nmbr){
     completeArr.map((list , index)=>{
         completedListItemHolder.innerHTML += `
             <li class="" >
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="completedalign">
                     <div class="completeplx">
                         <i id="statusDone" data-index="${index}" onclick="movetoPending(${index})" class="fa-regular fa-circle-check"></i>
                         <p class="completed" data-index="${index}">${list}</p> 
@@ -115,7 +115,7 @@ function completeRender(){
     completeArr.map((list, index) => {
         completedListItemHolder.innerHTML += `
             <li class="" >
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="completedalign">
                     <div class="completeplx">
                         <i id="statusDone" data-index="${index}" onclick="movetoPending(${index})" class="fa-regular fa-circle-check"></i>
                         <p class="completed" data-index="${index}">${list}</p> 
@@ -136,3 +136,20 @@ function deleteComplete(nmbr){
 }
 
 
+// Boxes opener
+let done = document.querySelector('.done');
+let pendingbx = document.querySelector('.pending');
+let pendingbtn = document.querySelector('.paddingList');
+let completebnt = document.querySelector('.completeList');
+pendingbtn.addEventListener('click' , ()=>{
+    pendingbtn.classList.add('active');
+    completebnt.classList.remove('active');
+    pendingbx.classList.add('active')
+    done.classList.remove('active')
+})
+completebnt.addEventListener('click' , ()=>{
+    pendingbtn.classList.remove('active');
+    completebnt.classList.add('active');
+    pendingbx.classList.remove('active')
+    done.classList.add('active')
+})
