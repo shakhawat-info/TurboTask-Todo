@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Aldrich", serif;
+}
+
+body{
+    color: #fff;
+}
+#todo{
+    /* width: 1280px; */
+    height: 100vh;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    width: 1280px;
+    height: 850px;
+    background: #040b3cdd;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 20px;
+}
+.form-control input::placeholder{
+    font-size: 16px;
+}
+.form-control input{
+    width: 92%;
+    font-size:20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 5px 10px ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.form-control input.empty::placeholder{
+    color: red;
+}
+.form-control button{
+    font-size: 20px;
+    font-weight: 700;
+    color: #040b3cdd;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: 2px solid #040b3cdd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+.form-control button:hover{
+    color: #fff;
+    background-color: #040b3cdd;
+}
+.eidit , .trash{
+    cursor: pointer;
+    padding: 0px 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.trash{
+    color: rgb(189, 84, 84);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.pending,
+.done{
+    width: 50%;
+    height: 640px;
+    border: 1px solid #fff;
+    overflow-y: auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.itemHead{
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    font-size: 20px;
+    display: flex;justify-content: space-around;
+}
+@media (max-width: 400px) {
+    .itemHead{
+        font-size: 13px;
+    }
+  }
+.list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+}
+.list.func{
+    width: fit-content;
+}
+.list p{
+    padding: 5px 0 0 ;
+    margin: 0;
+    width: 100%;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.completeplx{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.completeplx p{
+    margin: 5px 0 0;
+    padding: 0;
+}
+#pendingListItemHolder,
+#completedListItemHolder {
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#pendingListItemHolder li{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    /* color: #000; */
+    background-color: rgb(164 165 3);
+    list-style-type: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 10px;
+}
+/* #pendingListItemHolder li:nth-child(odd){
+    background-color: #c102a3;
+} */
+#completedListItemHolder li{
+    font-size: 20px;
+    text-transform: capitalize;
+    list-style-type: none;
+    background-color: #1eb521;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 10px;
+}
+#statusDone{
+    cursor: pointer;
+}
+#deleteIcon{
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#deleteIcon:hover{
+    background-color: red !important;
+}
+.statusWaitting{
+    display: none;
+}
+.statusCompleted{
+    display: block;
+    text-decoration: line-through;
+}
